@@ -30,8 +30,6 @@ class MusicLibraryController
         list_artists
       when "list genres"
         list_genres
-      when "list genres"
-        Genre.all.each {|genre| puts "#{genre.name}"}
       when "list artist"
         list_songs_by_artist
       when "list genre"
