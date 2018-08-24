@@ -29,7 +29,6 @@ class MusicLibraryController
       when "list artists"
         list_artists
       when "list genres"
-        list_genres
         Artist.all.each {|artist| puts "#{artist.name}"}
       when "list genres"
         Genre.all.each {|genre| puts "#{genre.name}"}
@@ -56,9 +55,6 @@ class MusicLibraryController
   def list_genres
     Genre.all.sort{|x, y| x.name <=> y.name}.each_with_index do |genre, index|
       puts "#{index+1}. #{genre.name}"
-
-    Song.all.sort {|x, y| x.name <=> y.name}.each.with_index(1) do |song, index|
-      puts "#{index}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
     end
   end
 
