@@ -29,7 +29,7 @@ class MusicLibraryController
       when "list artists"
         list_artists
       when "list genres"
-        Artist.all.each {|artist| puts "#{artist.name}"}
+        list_genres
       when "list genres"
         Genre.all.each {|genre| puts "#{genre.name}"}
       when "list artist"
